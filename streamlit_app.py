@@ -14,7 +14,7 @@ st.title("📊 Product Review Sentiment Analysis")
 uploaded_file = st.file_uploader("Upload PDF with Product Reviews", type=['pdf'])
 
 def extract_text_from_pdf(pdf_file):
-    pdf_reader = PyPDF2.PdfReader(pdf_file)
+    pdf_reader = PdfReader(pdf_file)
     text = ""
     for page in pdf_reader.pages:
         text += page.extract_text()
